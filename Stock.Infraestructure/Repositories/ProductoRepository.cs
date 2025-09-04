@@ -36,7 +36,7 @@ namespace Stock.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public async  Task<bool> Modificar(Producto entity)
+        public async Task<bool> Modificar(Producto entity)
         {
             await GetMongoCollection().ReplaceOneAsync(item => item.IdProducto == entity.IdProducto, entity);
 

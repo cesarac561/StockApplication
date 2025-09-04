@@ -21,7 +21,7 @@ namespace Stock.Api.Controllers
         [HttpGet("consultar")]
         public async Task<IActionResult> Consultar([FromQuery] ConsultarProductosRequest request)
         {
-            var dado1 = _configInfo["dbStocks-cnx"];
+            //var dado1 = _configInfo["dbStocks-cnx"];
             var response = await _mediator.Send(request);
 
             return Ok(response);

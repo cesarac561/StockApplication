@@ -15,8 +15,6 @@ namespace Stock.Domain.Models
         public int Stock { get; set; }
         public int StockMinimo { get; set; }
         public decimal PrecioUnitario { get; set; }
-        public int IdCategoria { get; set; }
-
 
     }
 }

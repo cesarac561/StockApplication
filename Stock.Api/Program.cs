@@ -23,8 +23,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 
 //Capa de infra
-//var connectionString = builder.Configuration.GetConnectionString("dbStocks-cnx");
-var connectionString = builder.Configuration["dbStocks-cnx"];
+var connectionString = builder.Configuration.GetConnectionString("dbStocks-cnx");
+//var connectionString = builder.Configuration["dbStocks-cnx"];
 builder.Services.AddInfraestructure(connectionString);
 
 
