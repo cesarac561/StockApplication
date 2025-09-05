@@ -42,7 +42,7 @@ namespace Stock.Application.CasosUso.AdministrarProductos.ConsultarProductos
                 var actualizar =  await _productoRepository.Modificar(producto);
                 if (actualizar)
                 {
-                    await _eventSender.PublishAsync("stocks", JsonSerializer.Serialize(producto), cancellationToken);
+                    //await _eventSender.PublishAsync("stocks", JsonSerializer.Serialize(producto), cancellationToken);
                     //Publicar la información en la cola de Kafka
                     return new SuccessResult();
                 }
